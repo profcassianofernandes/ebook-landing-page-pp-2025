@@ -1,11 +1,516 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>30 Temas de Redação – Polícia Penal do Espírito Santo (PPES)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Sora:wght@600;800&display=swap"
+        rel="stylesheet">
+    <style>
+        /* --- Configurações Gerais --- */
+        :root {
+            --cor-primaria: #0d47a1;
+            /* Azul escuro */
+            --cor-primaria-escura: #0d326e;
+            --cor-secundaria: #ff9800;
+            /* Laranja */
+            --cor-texto: #333;
+            --cor-fundo: #f4f8fa;
+            /* Cinza claro */
+            --cor-branco: #ffffff;
+            --cor-sucesso: #2e7d32;
+            --sombra: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            background-color: var(--cor-branco);
+            color: var(--cor-texto);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Sora', sans-serif;
+            color: var(--cor-primaria);
+            text-align: center;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        /* --- Bloco de Abertura (Hero) --- */
+        .hero {
+            background: linear-gradient(135deg, var(--cor-primaria-escura), var(--cor-primaria));
+            color: var(--cor-branco);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5em, 5vw, 3.5em);
+            color: var(--cor-branco);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            margin: 0;
+        }
+
+        .hero .subtitle {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 20px auto 0;
+            opacity: 0.9;
+        }
+
+        .ebook-mockup {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            margin: 40px auto 0;
+            border-radius: 8px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            background-color: #ccc;
+            aspect-ratio: 4 / 3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #666;
+            font-style: italic;
+        }
+
+        /* --- Botões (CTA) --- */
+        .cta-button {
+            display: inline-block;
+            background-color: var(--cor-secundaria);
+            color: var(--cor-branco);
+            font-family: 'Sora', sans-serif;
+            font-size: 1.2em;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            margin-top: 30px;
+            box-shadow: 0 5px 15px rgba(255, 152, 0, 0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 152, 0, 0.5);
+        }
+
+        .cta-button.secondary {
+            background-color: transparent;
+            border: 2px solid var(--cor-secundaria);
+            color: var(--cor-secundaria);
+            box-shadow: none;
+        }
+
+        .cta-button.secondary:hover {
+            background-color: var(--cor-secundaria);
+            color: var(--cor-branco);
+            box-shadow: 0 5px 15px rgba(255, 152, 0, 0.4);
+        }
+
+        /* --- Seções com Cores Alternadas --- */
+        #dor,
+        #conteudo,
+        #oferta,
+        #faq {
+            background-color: var(--cor-fundo);
+        }
+
+        #amostra,
+        #garantia,
+        #final-cta {
+            background-color: var(--cor-primaria-escura);
+            color: var(--cor-branco);
+        }
+
+        #amostra h2,
+        #garantia h2,
+        #garantia h3,
+        #final-cta h2 {
+            color: var(--cor-branco);
+        }
+
+        #garantia .guarantee-seal svg {
+            fill: var(--cor-branco);
+        }
+
+        /* --- Seção da Dor --- */
+        .pain-points {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .pain-point {
+            background-color: var(--cor-branco);
+            border-radius: 8px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            box-shadow: var(--sombra);
+            border: 1px solid #e0e0e0;
+        }
+
+        .pain-point-icon {
+            font-size: 2.5em;
+            color: #d32f2f;
+        }
+
+        /* --- Benefícios --- */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .benefit-icon {
+            font-size: 1.8em;
+            color: var(--cor-sucesso);
+        }
+
+        .benefit-item h4 {
+            font-family: 'Sora', sans-serif;
+            margin: 0 0 5px 0;
+            color: var(--cor-primaria);
+        }
+
+        /* --- Autor --- */
+        .author-bio {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .author-bio h4 {
+            font-size: 1.5em;
+        }
+
+        /* --- Oferta --- */
+        .offer-box {
+            background-color: var(--cor-branco);
+            border: 2px solid var(--cor-secundaria);
+            border-radius: 10px;
+            padding: 40px;
+            max-width: 600px;
+            margin: 40px auto 0;
+            text-align: center;
+            box-shadow: var(--sombra);
+        }
+
+        .price {
+            font-family: 'Sora', sans-serif;
+            font-size: 3em;
+            font-weight: 800;
+            color: var(--cor-primaria);
+            margin: 10px 0;
+        }
+
+        /* --- Garantia --- */
+        .guarantee-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .guarantee-seal svg {
+            max-width: 150px;
+            width: 100%;
+            height: auto;
+        }
+
+        /* --- FAQ --- */
+        .faq-item {
+            background-color: var(--cor-branco);
+            border-radius: 8px;
+            margin-bottom: 10px;
+            box-shadow: var(--sombra);
+        }
+
+        .faq-item summary {
+            font-family: 'Sora', sans-serif;
+            font-size: 1.1em;
+            font-weight: 600;
+            padding: 15px 20px;
+            cursor: pointer;
+            list-style: none;
+        }
+
+        .faq-item p {
+            padding: 0 20px 15px;
+        }
+
+        /* --- Rodapé --- */
+        footer {
+            background-color: #1e283b;
+            color: var(--cor-branco);
+            text-align: center;
+            padding: 30px;
+            border-top: 5px solid var(--cor-secundaria);
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Em breve</h1>
+
+    <header class="hero">
+        <div class="container">
+            <h1>30 TEMAS DE REDAÇÃO POLÍCIA PENAL DO ESPÍRITO SANTO (PPES)</h1>
+            <p class="subtitle">O guia com 30 temas analisados e a estrutura exata que a banca IDCAP espera ver na sua
+                prova.</p>
+            <div class="ebook-mockup">
+                <span>[Aqui entrará a imagem da capa do seu e-book]</span>
+            </div>
+            <a href="#link-de-checkout" class="cta-button">QUERO AUMENTAR MINHAS CHANCES DE APROVAÇÃO</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="dor">
+            <div class="container">
+                <h2>A prova de redação te impede de alcançar o cargo dos seus sonhos?</h2>
+                <div class="pain-points">
+                    <div class="pain-point">
+                        <div class="pain-point-icon">😨</div>
+                        <h4>Medo do Tema</h4>
+                        <p>Receio de cair um tema que você nunca viu e não saber por onde começar a escrever?</p>
+                    </div>
+                    <div class="pain-point">
+                        <div class="pain-point-icon">✍️</div>
+                        <h4>Falta de Estrutura</h4>
+                        <p>Você tem as ideias, mas se perde na hora de organizar a introdução, o desenvolvimento e a
+                            conclusão?</p>
+                    </div>
+                    <div class="pain-point">
+                        <div class="pain-point-icon">⏳</div>
+                        <h4>Pouco Tempo</h4>
+                        <p>Acha que não tem tempo suficiente para pesquisar e treinar todos os possíveis temas até o dia
+                            da prova?</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="solucao">
+            <div class="container">
+                <h2>O caminho mais seguro para uma redação nota máxima está aqui.</h2>
+                <p style="text-align: center; max-width: 700px; margin: 20px auto;">Nós sabemos que a prova discursiva é
+                    o que separa os aprovados dos reprovados. Por isso, criamos um material estratégico, focado 100% na
+                    realidade do concurso da PPES. Com o nosso e-book, você terá acesso a 30 temas com forte chance de
+                    serem cobrados na prova, todos com textos-modelo que seguem à risca os critérios da banca IDCAP. É o
+                    atalho que você precisava para ganhar confiança e sair na frente da concorrência.</p>
+            </div>
+        </section>
+
+        <section id="beneficios">
+            <div class="container">
+                <h2>O que você vai conquistar com este material?</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🎯</div>
+                        <div>
+                            <h4>Domínio sobre a Banca</h4>
+                            <p>Entenda exatamente o que a IDCAP espera de uma redação de alto nível e aplique a
+                                estrutura que garante a pontuação máxima.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🧠</div>
+                        <div>
+                            <h4>Repertório Estratégico</h4>
+                            <p>Tenha argumentos, dados e citações prontos para usar. Garantimos que um dos 30 temas terá
+                                forte relação com a prova real.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">📈</div>
+                        <div>
+                            <h4>Aumento Real da Nota</h4>
+                            <p>Eleve consideravelmente suas chances de aprovação com um material que te prepara para o
+                                cenário mais provável da prova discursiva.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">💪</div>
+                        <div>
+                            <h4>Confiança Inabalável</h4>
+                            <p>Chegue no dia da prova tranquilo, sabendo que você está preparado para qualquer tema que
+                                a banca apresentar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="amostra">
+            <div class="container" style="text-align: center;">
+                <h2>Ainda na dúvida? Baixe uma amostra grátis!</h2>
+                <p>Veja com seus próprios olhos a qualidade do nosso material. Disponibilizamos a análise completa de 3
+                    dos 30 temas para você conhecer nossa metodologia e começar a sua preparação agora mesmo.</p>
+                <a href="#link-amostra-gratis" class="cta-button secondary">BAIXAR AMOSTRA GRÁTIS</a>
+            </div>
+        </section>
+
+        <section id="conteudo">
+            <div class="container">
+                <h2>O que você vai receber ao adquirir o e-book?</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">📄</div>
+                        <div>
+                            <h4>30 Temas Analisados</h4>
+                            <p>Uma seleção criteriosa dos temas mais quentes para o concurso da Polícia Penal do
+                                Espírito Santo.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🖋️</div>
+                        <div>
+                            <h4>Textos-Modelo Completos</h4>
+                            <p>Redações prontas para cada tema, com introdução, desenvolvimentos e conclusão, servindo
+                                como base para seus estudos.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🔍</div>
+                        <div>
+                            <h4>Análise da Banca IDCAP</h4>
+                            <p>Explicações claras sobre os critérios de correção para você não perder nenhum ponto.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">💡</div>
+                        <div>
+                            <h4>Estrutura Validada</h4>
+                            <p>Acesso ao "esqueleto" de redação que funciona e pode ser adaptado para diferentes
+                                assuntos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="autor">
+            <div class="container">
+                <div class="author-bio">
+                    <h2>Quem preparou este material para você?</h2>
+                    <h4>Professor Cassiano Fernandes</h4>
+                    <p>Especialista em redação para concursos públicos, com vasta experiência na análise de bancas e na
+                        preparação de candidatos para as carreiras policiais. Sua metodologia foca em ensinar de forma
+                        prática e direta o caminho para alcançar a nota máxima na prova discursiva, transformando a
+                        redação no diferencial para a sua aprovação.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="oferta">
+            <div class="container">
+                <div class="offer-box">
+                    <h2>Saia na frente de milhares de concorrentes AGORA!</h2>
+                    <p>Tenha acesso imediato a todo o material estratégico que vai elevar o nível da sua preparação.</p>
+                    <div class="price">R$ 99,99</div>
+                    <p>Pagamento único, acesso vitalício.</p>
+                    <a href="#link-de-checkout" class="cta-button">QUERO SER APROVADO NA PPES</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="garantia">
+            <div class="container">
+                <div class="guarantee-box">
+                    <div class="guarantee-seal">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2ZM11,16.71l-3.14-3.14,1.41-1.41,1.73,1.72,4.59-4.59,1.41,1.41Z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3>Sua aprovação é o nosso compromisso. Ou seu dinheiro de volta.</h3>
+                        <p>Nós confiamos tanto na qualidade deste material que oferecemos uma garantia incondicional de
+                            7 dias. Se, por qualquer motivo, você não estiver satisfeito com o e-book, basta nos enviar
+                            um e-mail e nós devolveremos 100% do seu investimento. Sem perguntas, sem burocracia. O
+                            risco é todo nosso.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq">
+            <div class="container">
+                <h2>Perguntas Frequentes</h2>
+                <details class="faq-item">
+                    <summary>Como vou receber o acesso ao e-book?</summary>
+                    <p>Assim que o pagamento for confirmado, você receberá um e-mail com o link para baixar o e-book em
+                        formato PDF. O acesso é imediato.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>O pagamento é seguro?</summary>
+                    <p>Sim, 100% seguro. O pagamento é processado por uma das maiores plataformas de produtos digitais
+                        do Brasil, utilizando criptografia de ponta para proteger seus dados.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Posso parcelar o valor?</summary>
+                    <p>Sim, a plataforma de pagamento oferece opções de parcelamento no cartão de crédito. Você poderá
+                        ver as opções disponíveis na página de checkout.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Por quanto tempo terei acesso ao material?</summary>
+                    <p>O acesso ao e-book é vitalício. Você pode baixar e consultar o material para sempre, inclusive
+                        para outros concursos.</p>
+                </details>
+            </div>
+        </section>
+
+        <section id="final-cta">
+            <div class="container" style="text-align: center;">
+                <h2>Você está a um passo de dominar a redação da PPES.</h2>
+                <p>Não deixe a prova discursiva te eliminar. Invista na sua preparação e garanta os pontos que farão a
+                    diferença na sua classificação final.</p>
+                <a href="#link-de-checkout" class="cta-button">SIM, QUERO GARANTIR MINHA VAGA!</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><strong>[NOME DA EMPRESA]</strong></p>
+        <p>Email para suporte: <a href="mailto:suporte@seusite.com.br"
+                style="color: var(--cor-branco);">suporte@seusite.com.br</a></p>
+        <p><a href="#link-instagram" style="color: var(--cor-branco);">Instagram</a> | <a href="#link-youtube"
+                style="color: var(--cor-branco);">YouTube</a></p>
+        <p style="font-size: 0.8em; opacity: 0.7;">Todos os direitos reservados © 2025</p>
+    </footer>
+
 </body>
+
 </html>
