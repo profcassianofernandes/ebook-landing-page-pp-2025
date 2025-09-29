@@ -2,7 +2,6 @@
 <html lang="pt-BR">
 
 <head>
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1V2QMX06K9"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -29,16 +28,12 @@
         rel="stylesheet">
 
     <style>
-        /* [Todo o seu código CSS anterior entra aqui, sem nenhuma alteração] */
         :root {
             --cor-primaria: #0d47a1;
-            /* Azul escuro */
             --cor-primaria-escura: #0d326e;
             --cor-secundaria: #ff9800;
-            /* Laranja */
             --cor-texto: #333;
             --cor-fundo: #f4f8fa;
-            /* Cinza claro */
             --cor-branco: #ffffff;
             --cor-sucesso: #2e7d32;
             --sombra: 0 10px 25px rgba(0, 0, 0, 0.08);
@@ -83,7 +78,7 @@
         }
 
         .hero h1 {
-            font-size: clamp(2.5em, 5vw, 3.5em);
+            font-size: clamp(2.5em, 5vw, 3.3em);
             color: var(--cor-branco);
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
             margin: 0;
@@ -92,24 +87,20 @@
         .hero .subtitle {
             font-size: 1.2em;
             max-width: 600px;
-            margin: 20px auto 0;
+            margin: 10px auto 0;
             opacity: 0.9;
         }
 
         .ebook-mockup {
             width: 100%;
-            max-width: 400px;
+            max-width: 350px;
+            /* A imagem terá no máximo 400px de largura */
             height: auto;
-            margin: 40px auto 0;
-            border-radius: 8px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-            background-color: #ccc;
-            aspect-ratio: 4 / 3;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #666;
-            font-style: italic;
+            /* A altura se ajustará automaticamente para manter a proporção */
+            margin: 0 auto 0;
+            /* box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); */
+            display: block;
+            /* Garante que a margem automática funcione corretamente */
         }
 
         .cta-button {
@@ -122,7 +113,7 @@
             text-decoration: none;
             padding: 15px 40px;
             border-radius: 50px;
-            margin-top: 30px;
+            margin-top: 15px;
             box-shadow: 0 5px 15px rgba(255, 152, 0, 0.4);
             transition: transform 0.3s, box-shadow 0.3s;
         }
@@ -152,6 +143,8 @@
             background-color: var(--cor-fundo);
         }
 
+        #valor,
+        /* NOVA SEÇÃO COM FUNDO AZUL */
         #amostra,
         #garantia,
         #final-cta {
@@ -159,6 +152,8 @@
             color: var(--cor-branco);
         }
 
+        #valor h2,
+        /* TÍTULOS DAS SEÇÕES AZUIS FICAM BRANCOS */
         #amostra h2,
         #garantia h2,
         #garantia h3,
@@ -288,6 +283,26 @@
             padding: 30px;
             border-top: 5px solid var(--cor-secundaria);
         }
+
+        /* Estilo para o destaque do preço por tema */
+        .price-highlight {
+            background-color: #fffde7;
+            /* Um amarelo bem claro para chamar atenção */
+            border: 2px dashed var(--cor-secundaria);
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin: 30px auto;
+            max-width: 500px;
+            font-family: 'Sora', sans-serif;
+            font-size: 1.3em;
+            font-weight: 600;
+            color: var(--cor-primaria);
+        }
+
+        .price-highlight strong {
+            color: var(--cor-sucesso);
+            font-weight: 800;
+        }
     </style>
 
 </head>
@@ -299,10 +314,8 @@
             <h1>30 TEMAS DE REDAÇÃO POLÍCIA PENAL DO ESPÍRITO SANTO (PPES)</h1>
             <p class="subtitle">O guia com 30 temas analisados e a estrutura exata que a banca IDCAP espera ver na sua
                 prova.</p>
-            <div class="ebook-mockup" role="img"
-                aria-label="Capa do e-book 30 Temas de Redação para a Polícia Penal ES">
-                <span>[Aqui entrará a imagem da capa do seu e-book]</span>
-            </div>
+            <img src="e-book-cover.png" alt="Capa do e-book 30 Temas de Redação para a Polícia Penal ES"
+                class="ebook-mockup">
             <a href="#link-de-checkout" class="cta-button">QUERO AUMENTAR MINHAS CHANCES DE APROVAÇÃO</a>
         </div>
     </header>
@@ -341,6 +354,21 @@
                     realidade do concurso da PPES. Com o nosso e-book, você terá acesso a 30 temas com forte chance de
                     serem cobrados na prova, todos com textos-modelo que seguem à risca os critérios da banca IDCAP. É o
                     atalho que você precisava para ganhar confiança e sair na frente da concorrência.</p>
+            </div>
+        </section>
+
+        <section id="valor">
+            <div class="container" style="text-align: center;">
+                <h2>Um investimento inteligente no seu futuro</h2>
+                <p style="max-width: 700px; margin: 20px auto;">Pense no tempo que você levaria para pesquisar, estudar
+                    e estruturar 30 temas do zero. São semanas de trabalho que você pode economizar para focar em outras
+                    matérias.</p>
+
+                <div class="price-highlight">
+                    Cada tema de redação sai por menos de <strong>R$3,50</strong>
+                </div>
+
+                <a href="#link-de-checkout" class="cta-button">QUERO ECONOMIZAR TEMPO E DINHEIRO</a>
             </div>
         </section>
 
@@ -386,10 +414,10 @@
 
         <section id="amostra">
             <div class="container" style="text-align: center;">
-                <h2>Ainda na dúvida? Baixe uma amostra grátis!</h2>
-                <p>Veja com seus próprios olhos a qualidade do nosso material. Disponibilizamos a análise completa de 3
-                    dos 30 temas para você conhecer nossa metodologia e começar a sua preparação agora mesmo.</p>
-                <a href="#link-amostra-gratis" class="cta-button secondary">BAIXAR AMOSTRA GRÁTIS</a>
+                <h2>Ainda na dúvida? Receba uma amostra grátis!</h2>
+                <p>Entre no nosso grupo de estudos no WhatsApp para receber a análise completa de 3 temas do e-book,
+                    além de dicas exclusivas e novidades sobre o concurso. Participe da nossa comunidade!</p>
+                <a href="#link-para-o-grupo-whatsapp" class="cta-button secondary">ENTRAR NO GRUPO DE ESTUDOS</a>
             </div>
         </section>
 
@@ -515,11 +543,7 @@
     </main>
 
     <footer>
-        <p><strong>[NOME DA EMPRESA]</strong></p>
-        <p>Email para suporte: <a href="mailto:suporte@seusite.com.br"
-                style="color: var(--cor-branco);">suporte@seusite.com.br</a></p>
-        <p><a href="#link-instagram" style="color: var(--cor-branco);">Instagram</a> | <a href="#link-youtube"
-                style="color: var(--cor-branco);">YouTube</a></p>
+        <p><a href="#link-instagram" style="color: var(--cor-branco);">Instagram</a></p>
         <p style="font-size: 0.8em; opacity: 0.7;">Todos os direitos reservados © 2025</p>
     </footer>
 
